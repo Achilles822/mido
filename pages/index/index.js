@@ -25,6 +25,11 @@ Page({
     })
   },
   onLoad: function () {
+    wx.showToast({
+      title: '加载中',
+      icon: 'loading',
+      mask: true
+    }) 
     //基本网址
     var baseUrl = app.globalData.baseUrl;
     //起止条数
@@ -42,6 +47,7 @@ Page({
     httpUtil.requestBlock(recentUrl, "recent", "即将上映", this.processResult);
     //获取排行版电影数据
     httpUtil.requestBlock(top250Url, "top250", "排行榜", this.processResult);
+    wx.hideToast();
     // this.getHotList();
     if (app.globalData.userInfo) {
       this.setData({
