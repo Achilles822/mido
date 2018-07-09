@@ -6,11 +6,13 @@
   background-color: #ffffff;
   height:178rpx;
   color:#323232;
+  border-radius: 18rpx;
 }
 .image{
   width:133rpx;
   height:206rpx;
   margin-top:-44rpx;
+  margin-left:38rpx;
   border-radius: 18rpx;
 }
 .wrapper{
