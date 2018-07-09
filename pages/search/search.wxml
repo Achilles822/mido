@@ -1,5 +1,6 @@
 <!--search.wxml-->
-<view>
+<view class='wrapper'>
+<view class='search'></view>
 <block  wx:for="{{movies}}" wx:for-item="item">
 <view class="item-container">
 <image class='image' src='{{item.images.large}}'></image>
