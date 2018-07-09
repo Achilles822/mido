@@ -1,7 +1,7 @@
-// search.js
-import httpUtil from '../../utils/http.js';
-//获取应用实例
-const app = getApp()
+// detail.js
+//index.js
+var httpUtil = require('../../../utils/http.js');
+const app = getApp();
 
 Page({
 
@@ -9,24 +9,41 @@ Page({
    * 页面的初始数据
    */
   data: {
-    movies:{}
+    trainer:null,
+    images:null,
+    title: null,
+    genres: null,
+    countries: null,
+    durations: null,
+    pubdates: null,
+    wish_count: null,
+    original_title:null
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.showToast({
-      title: '加载中',
-      icon: 'loading',
-      mask: true
-    }) 
-    //基本网址
-    let baseUrl = app.globalData.baseUrl;
-    let newMoviesUrl = baseUrl + '/v2/movie/new_movies';
-    httpUtil.request(newMoviesUrl, this.loadList);
-    wx.hideToast();
+    console.log(options.movieId);
+    let url = app.globalData.baseUrl +'/v2/movie/subject/'+options.movieId;
+    httpUtil.request(url, this.loadList)
   },
+
+  loadList(result) {
+    console.log(result);
+    this.setData({
+      trainer: result.trailer_urls,
+      images: result.images.large,
+      title:result.title,
+      genres:result.genres,
+      countries:result.countries,
+      durations:result.durations,
+      pubdates:result.pubdates[0],
+      wish_count:result.wish_count,
+      original_title: result.original_title
+    })
+  },
+
 
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -75,19 +92,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-  loadList(result) {
-    console.log(result);
-    this.setData({
-      movies:result.subjects
-    })
-    console.log(this.data.movies)
-  },
-  catchTapMovie(e) {
-    console.log(e);
-    let id = e.currentTarget.dataset.movieid;
-    wx.navigateTo({
-      url: '../index/detail/detail?movieId=' + id
-    })
   }
 })

@@ -1,10 +1,27 @@
 <!--search.wxml-->
+<!--导入评分条模板wxml文件，注意别少了后面的 / 符号-->
+<import src="../../templates/ratingbar/ratingbar.wxml" />
 <view class='wrapper'>
-<view class='search'></view>
-<block  wx:for="{{movies}}" wx:for-item="item">
-<view class="item-container">
-<image class='image' src='{{item.images.large}}'></image>
-<text>{{item.title}}</text>
-</view>
-</block>
+  <view class='search'></view>
+  <block wx:for="{{movies}}" wx:for-item="item" >
+    <view class="item-container" catchtap='catchTapMovie' data-movieid='{{item.id}}'>
+      <image class='image' src='{{item.images.large}}'></image>
+      <view class='container-right'>
+        <text class='title'>{{item.title}}</text>
+        <view style="flex-direction:row;margin-left:37rpx">
+          <text wx:for="{{item.genres}}" wx:for-item="it" class='subtitle'>{{it}}</text>
+          <text class='subtitle'>|{{item.durations[0]}}</text>
+        </view>
+
+
+
+<view class='ratingbar'>
+      <!--评分条-->
+      <template is="template-ratingbar-stars" data="{{...item.rating}}" />
+      <!--评分分数-->
+      <text class='ratingbar-score'>{{item.rating.average}}</text>
+    </view>
+      </view>
+    </view>
+  </block>
 </view>

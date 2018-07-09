@@ -1,0 +1,20 @@
+<!--detail.wxml-->
+<view class='avatar-container'>
+  <image class='avatar' mode="aspectFit" src="{{images}}"></image>
+  <view class='content-wrapper'>
+      <text class='title'>{{title}}</text>
+  
+      <text class='e_title'>{{original_title}}</text>
+      <text class='genres'>{{genres}}</text>
+      <text class='genres'>{{countries}}/{{durations}}</text>
+      <text class='genres'>{{pubdates}}上映</text>
+      <view class='want-watch'>
+      <text class='yellow'>{{wish_count}}</text>
+      <text>人想看</text>
+      </view>
+  </view>
+</view>
+  <view class='container-wrapper-bottom'>
+    <button class='btn'><image class='icon' src="../../../images/heart.png"></image>想看</button>
+     <button class='btn'><image class='icon' src="../../../images/collection.png"></image>收藏</button>
+  </view>

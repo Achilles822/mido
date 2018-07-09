@@ -84,14 +84,6 @@ Page({
       hasUserInfo: true
     })
   },
-// 正在上映
-  // getHotList(){
-  //   let hotListUrl = main.API_URL + '/v2/movie/in_theaters';
-  //   http.request(hotListUrl,this.hotList)
-  // },
-  // hotList(result){
-  //   console.log(result);
-  // },
   processResult: function (result, key, blockTitle) {
     console.log(result.subjects)
     //处理电影名称过长的问题，截取前8位
@@ -108,5 +100,12 @@ Page({
       threeBlockInfo: this.data.threeBlockInfo
     })
   },
+  catchTapMovie(e){
+      console.log(e);
+      let id = e.currentTarget.dataset.movieid;
+      wx.navigateTo({
+        url: 'detail/detail?movieId=' + id
+      })
+  }
 
 })

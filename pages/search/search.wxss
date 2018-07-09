@@ -1,12 +1,16 @@
 /* search.wxss */
+/* 导入评分条模板wxss文件，注意是@import */
+@import "../../templates/ratingbar/ratingbar.wxss";
 .item-container{
   display: flex;
-  width:85%;
+  width:90%;
   margin:60rpx auto;
   background-color: #ffffff;
   height:178rpx;
   color:#323232;
   border-radius: 18rpx;
+  box-shadow:rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 3px 1px -2px, rgba(0, 0, 0, 0.2) 0px 1px 5px 0px;
+
 }
 .image{
   width:133rpx;
@@ -24,4 +28,31 @@
   width:100%;
   height:80rpx;
   background-color: yellow;
+}
+.title{
+  margin-left: 42rpx;
+  margin-top:39rpx;
+  font-weight: 600;
+  font-size:36rpx;
+}
+.container-right{
+  display: flex;
+  flex-direction: column;
+}
+.subtitle{
+  flex-direction: row;
+  color: #a7a7a7;
+  font-size:25rpx;
+  margin-left:5rpx;
+}
+
+
+.ratingbar {
+  display: flex;
+  margin-left: 42rpx;
+}
+
+.ratingbar-score{
+  color: #999999;
+  font-size: 23rpx;
 }

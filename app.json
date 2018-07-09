@@ -1,8 +1,9 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs",
-    "pages/search/search"
+    "pages/search/search",
+    "pages/user/user",
+    "pages/index/detail/detail"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -24,6 +25,12 @@
         "text": "搜索",
         "iconPath": "images/search.png",
         "selectedIconPath": "images/search-active.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "关于",
+        "iconPath": "images/user.png",
+        "selectedIconPath": "images/user-active.png"
       }
     ]
   }
