@@ -1,7 +1,7 @@
 <!--pages/movies/poster/poster.wxml-->
 
 <!--导入评分条模板wxml文件，注意别少了后面的 / 符号-->
-<import src="../ratingbar/ratingbar.wxml" />
+<import src="../../../templates/ratingbar/ratingbar.wxml" />
 
 <!--封装成名称为template-poster的模板-->
 <template name="template-poster">

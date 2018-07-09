@@ -1,2 +1,9 @@
 <!--search.wxml-->
-<text>search.wxml</text>
+<view>
+<block  wx:for="{{movies}}" wx:for-item="item">
+<view class="item-container">
+<image class='image' src='{{item.images.large}}'></image>
+<text>{{item.title}}</text>
+</view>
+</block>
+</view>

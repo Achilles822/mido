@@ -1,1 +1,13 @@
 /* search.wxss */
+.item-container{
+  display: flex;
+  width:85%;
+  margin: 10rpx auto;
+  background-color: green;
+  height:100rpx;
+  color:white;
+}
+.image{
+  width:133rpx;
+  height:206rpx;
+}

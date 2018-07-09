@@ -3,6 +3,7 @@
 function request(url, successCallback) {
   wx.request({
     url: url,
+    header: { 'Content-Type': 'json' },
     success: function (res) {
       successCallback(res.data);
     }
@@ -13,6 +14,7 @@ function request(url, successCallback) {
 function requestBlock(url, key, title, successCallback) {
   wx.request({
     url: url,
+    header: { 'Content-Type': 'json' },
     success: function (res) {
       successCallback(res.data, key, title);
     }
