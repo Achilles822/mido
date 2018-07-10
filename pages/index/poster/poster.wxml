@@ -13,9 +13,9 @@
     <!--评分星星和数字-->
     <view class='ratingbar'>
       <!--评分条-->
-      <template is="template-ratingbar-stars" data="{{...rating}}" />
+      <template is="template-ratingbar-stars" wx:if="{{rating.stars!='00'}}" data="{{...rating}}" />
       <!--评分分数-->
-      <text class='ratingbar-score'>{{rating.average}}</text>
+      <text class='ratingbar-score' wx:if="{{rating.stars!='00'}}">{{rating.average}}</text>
     </view>
   </view>
 </template>

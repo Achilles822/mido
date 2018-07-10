@@ -25,9 +25,15 @@
   background-color: #f5f5f5;
 }
 .search{
-  width:100%;
+  width:90%;
   height:80rpx;
-  background-color: yellow;
+  margin: 10rpx auto;
+  background-color: #ffffff;
+}
+.btn-search{
+   background-color: #ffffff;
+   font-size:28rpx;
+   line-height: 80rpx;
 }
 .title{
   margin-left: 42rpx;

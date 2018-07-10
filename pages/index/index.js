@@ -19,7 +19,7 @@ Page({
     }
   },
   //事件处理函数
-  bindViewTap: function() {
+  bindViewTap: function () {
     wx.navigateTo({
       url: '../logs/logs'
     })
@@ -29,7 +29,7 @@ Page({
       title: '加载中',
       icon: 'loading',
       mask: true
-    }) 
+    })
     //基本网址
     var baseUrl = app.globalData.baseUrl;
     //起止条数
@@ -54,7 +54,7 @@ Page({
         userInfo: app.globalData.userInfo,
         hasUserInfo: true
       })
-    } else if (this.data.canIUse){
+    } else if (this.data.canIUse) {
       // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
       // 所以此处加入 callback 以防止这种情况
       app.userInfoReadyCallback = res => {
@@ -76,7 +76,7 @@ Page({
       })
     }
   },
-  getUserInfo: function(e) {
+  getUserInfo: function (e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo
     this.setData({
@@ -100,12 +100,21 @@ Page({
       threeBlockInfo: this.data.threeBlockInfo
     })
   },
-  catchTapMovie(e){
-      console.log(e);
-      let id = e.currentTarget.dataset.movieid;
-      wx.navigateTo({
-        url: 'detail/detail?movieId=' + id
-      })
+  catchTapMovie(e) {
+    console.log(e);
+    let id = e.currentTarget.dataset.movieid;
+    wx.navigateTo({
+      url: 'detail/detail?movieId=' + id
+    })
+  },
+  catchMore: function (event) {
+    console.log(event)
+    //获得区块的标题
+    var title = event.currentTarget.dataset.title
+    //跳转到“更多页”，将区块标题通过category携带过去
+    wx.navigateTo({
+      url: 'more/more?category=' + title
+    })
   }
 
 })
