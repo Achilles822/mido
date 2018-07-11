@@ -84,3 +84,9 @@
   height: 34rpx;
   margin-right: 10rpx;
 }
+.summary{
+  font-size:25rpx;
+  padding:20rpx;
+  overflow: hidden;
+  height:114rpx;
+}

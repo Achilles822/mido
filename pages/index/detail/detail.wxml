@@ -18,3 +18,17 @@
     <button class='btn'><image class='icon' src="../../../images/heart.png"></image>想看</button>
      <button class='btn'><image class='icon' src="../../../images/collection.png"></image>收藏</button>
   </view>
+  <view class='summary' bindtap="changeHeight" style="height:{{height}};">
+  {{summary}}
+  </view>
+ <view class='actor' style='margin-top:30rpx;border-top:10rpx solid #a5a5a5;'>
+ <text  style='height:80rpx;width:100%;font-size:30rpx;margin:32rpx;font-weight:550'>演职人员</text>
+  <scroll-view scroll-x="true" style="width:100%;white-space: nowrap; display: flex;">
+      <block wx:for="{{casts}}" wx:for-item="item">
+      
+        <image src='{{item.avatars.large}}' style='display:flex;flex-direction:column;width:160rpx;height:195rpx;padding:20rpx;border-radius:30rpx;'></image>
+        <text style="width:50rpx;">{{item.name}}</text>
+      
+      </block>
+  </scroll-view>
+ </view>

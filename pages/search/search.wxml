@@ -3,9 +3,12 @@
 <import src="../../templates/ratingbar/ratingbar.wxml" />
 <view class='wrapper'>
   <view class='search'>
-  <button class='btn-search'>搜索</button>
+    <!-- <navigator url="pages/search/searchbar/searchbar">
+      <button class='btn-search'>搜索</button>
+      </<navigator> -->
+       <navigator style='width:100%;' url="./searchbar/searchbar" hover-class="navigator-hover"> <button class='btn-search'>搜索</button></navigator>
   </view>
-  <block wx:for="{{movies}}" wx:for-item="item" >
+  <block wx:for="{{movies}}" wx:for-item="item">
     <view class="item-container" catchtap='catchTapMovie' data-movieid='{{item.id}}'>
       <image class='image' src='{{item.images.large}}'></image>
       <view class='container-right'>
@@ -17,12 +20,12 @@
 
 
 
-<view class='ratingbar'>
-      <!--评分条-->
-      <template is="template-ratingbar-stars" data="{{...item.rating}}" />
-      <!--评分分数-->
-      <text class='ratingbar-score'>{{item.rating.average}}</text>
-    </view>
+        <view class='ratingbar'>
+          <!--评分条-->
+          <template is="template-ratingbar-stars" data="{{...item.rating}}" />
+          <!--评分分数-->
+          <text class='ratingbar-score'>{{item.rating.average}}</text>
+        </view>
       </view>
     </view>
   </block>

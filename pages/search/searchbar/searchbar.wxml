@@ -1,0 +1,15 @@
+<!--pages/search/searchbar.wxml-->
+<view class='contain-wrapper'>
+<view class='search'>
+<input class="input-search" bindinput="bindKeyInput" type='text'></input>
+<button catchtap='doSearch' class='btn-search'>搜索</button>
+</view>
+<view class='tip-wrapper'>
+<text wx:if="result==null" class="tip">sorry,这里不能搜番号:(</text>
+</view>
+<view class='search-item' wx:if="result!=null">
+<block wx:for="{{result}}" wx:for-item="item" wx:if="result!=null">
+<text class='search-result' catchtap='catchTapMovie' data-movieid='{{item.id}}'>{{item.title}}</text>
+</block>
+</view>
+</view>

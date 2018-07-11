@@ -17,7 +17,11 @@ Page({
     durations: null,
     pubdates: null,
     wish_count: null,
-    original_title:null
+    original_title:null,
+    summary:null,
+    height:null,
+    flag:false,
+    casts:null
   },
 
   /**
@@ -40,11 +44,27 @@ Page({
       durations:result.durations,
       pubdates:result.pubdates[0],
       wish_count:result.wish_count,
-      original_title: result.original_title
+      original_title: result.original_title,
+      summary: result.summary,
+      casts: result.casts
     })
   },
-
-
+// 改变summary高度
+  changeHeight(){
+    this.setData({
+      flag:!this.data.flag
+    })
+    if(this.data.flag==true){
+      this.setData({
+        height:'auto'
+      })
+    }
+    else{
+      this.setData({
+        height: '114rpx'
+      })
+    }
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -91,6 +111,5 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-
   }
 })

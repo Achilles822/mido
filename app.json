@@ -5,7 +5,7 @@
     "pages/user/user",
     "pages/index/detail/detail",
     "pages/index/more/more",
-    "pages/search/searchbar"
+    "pages/search/searchbar/searchbar"
   ],
   "window": {
     "backgroundTextStyle": "light",
