@@ -26,8 +26,8 @@
   <scroll-view scroll-x="true" style="width:100%;white-space: nowrap; display: flex;">
       <block wx:for="{{casts}}" wx:for-item="item">
       
-        <image src='{{item.avatars.large}}' style='display:flex;flex-direction:column;width:160rpx;height:195rpx;padding:20rpx;border-radius:30rpx;'></image>
-        <text style="width:50rpx;">{{item.name}}</text>
+        <image src='{{item.avatars.large}}' style='width:160rpx;height:195rpx;padding:20rpx;border-radius:30rpx;'></image>
+        <!-- <text style="width:50rpx;">{{item.name}}</text> -->
       
       </block>
   </scroll-view>
