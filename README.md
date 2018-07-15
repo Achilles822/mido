@@ -18,3 +18,7 @@
 - 搜索功能
 - 当前热榜功能
 - 电影详情页（评分、评论、电影信息等）
+
+## 预览
+
+![预览](http://7xn1ui.com1.z0.glb.clouddn.com/review.jpg)
