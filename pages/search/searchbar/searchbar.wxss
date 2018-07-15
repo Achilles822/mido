@@ -8,7 +8,7 @@
 .search {
   width: 100%;
   height: 65rpx;
-  background-color: #a90000;
+  background-color: #e7843b;
   padding: 10rpx;
   padding-left: 20rpx;
   display: flex;
@@ -27,7 +27,7 @@
 .btn-search {
   color: #fff;
   font-size: 25rpx;
-  background-color: #a90000;
+  background-color: #e7843b;
   margin-right: 30rpx;
 }
 

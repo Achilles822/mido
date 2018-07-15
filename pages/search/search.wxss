@@ -27,7 +27,7 @@
 .search{
   width:100%;
   height:65rpx;
-  background-color: #a90000;
+  background-color: #e7843b;
   padding: 10rpx;
   padding-left: 0;
   display: flex;

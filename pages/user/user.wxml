@@ -1,2 +1,23 @@
 <!--user.wxml-->
-<text>user.wxml</text>
+<view class="content-wrapper">
+<text class="title">
+<text class='brand'>MIDO</text>
+——基于douban api开发的小程序\n </text>
+<text class='content'>开发的目的是熟悉小程序组件，不只是做一个demo，要达到日常也可以使用的程度。开发的时候遇到了不少困难，包括豆瓣API对小程序发起的请求进行了封锁，接口403问题，幸好有zce大神提供了douban-api-proxy代理，数据有了，UI的选择也比较头疼，最后参考了猫眼app的UI设计，部分代码参考了CnWen/WechatApp_Movie项目，感谢提供灵感。如果有什么意见或者建议，欢迎通过以下方式联系我。cheers～
+</text>
+<view class='achieve-title achieve-content'> 
+<image class="icon" src='../../images/email.png'></image>
+E-mail:779239635@qq.com</view>
+
+<view class='achieve-title achieve-content'> 
+<image class="icon" src='../../images/blog.png'></image>
+Blog:yanziyu.tech</view>
+
+<text class='achieve-title'>
+   实现的功能
+</text>
+<view wx:for="{{achieve}}" wx:for-item="item" class='achieve-title achieve-content'>
+<image class="icon" src='../../images/play.png'></image>
+{{item}}
+</view>
+</view>

@@ -18,10 +18,15 @@ Page({
     pubdates: null,
     wish_count: null,
     original_title:null,
+    collect_count:null,
     summary:null,
     height:null,
     flag:false,
-    casts:null
+    casts:null,
+    popular_reviews:null,
+    rating:null,
+    popular_comments:null,
+    ratings_count:null
   },
 
   /**
@@ -46,7 +51,12 @@ Page({
       wish_count:result.wish_count,
       original_title: result.original_title,
       summary: result.summary,
-      casts: result.casts
+      casts: result.casts,
+      popular_reviews: result.popular_reviews,
+      collect_count: result.collect_count,
+      rating: result.rating,
+      popular_comments: result.popular_comments,
+      ratings_count:result.ratings_count
     })
   },
 // 改变summary高度

@@ -1,1 +1,37 @@
 /* user.wxss */
+
+
+.title {
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+    text-align: center;
+    font-size: 35rpx;
+    color: #a5a5a5;
+    margin-top: 60rpx;
+}
+.brand{
+    color:#e7843b;
+    font-size:60rpx;
+}
+.content {
+    display: flex;
+    justify-content: center;
+    font-size: 28rpx;
+    margin: 40rpx;
+}
+
+.achieve-content {
+    margin-top:20rpx;
+    font-size: 28rpx;
+}
+
+.achieve-title {
+    display: flex;
+    justify-content: center;
+}
+.icon{
+    width:35rpx;
+    height: 35rpx;
+    margin-right:15rpx;
+}

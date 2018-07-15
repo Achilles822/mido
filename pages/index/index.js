@@ -4,7 +4,6 @@ var httpUtil = require('../../utils/http.js');
 var stringUtil = require('../../utils/stringUtil.js');
 //获取应用实例
 const app = getApp()
-import main from '../../consts/main.js';
 Page({
   data: {
     motto: 'Hello World',
