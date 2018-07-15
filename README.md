@@ -21,4 +21,4 @@
 
 ## 预览
 
-![预览](http://github.com/achilles822/mido/raw/master/images/review.png)
+![预览](https://raw.githubusercontent.com/achilles822/mido/master/images/review.jpg)
