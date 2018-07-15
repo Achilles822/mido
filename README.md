@@ -21,4 +21,4 @@
 
 ## 预览
 
-![预览](http://7xn1ui.com1.z0.glb.clouddn.com/review.jpg)
+![预览](http://github.com/achilles822/mido/raw/master/images/review.png)
