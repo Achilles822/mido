@@ -13,6 +13,10 @@ E-mail:779239635@qq.com</view>
 <image class="icon" src='../../images/blog.png'></image>
 Blog:yanziyu.tech</view>
 
+<view class='achieve-title achieve-content'> 
+<image class="icon" src='../../images/github3.png'></image>
+Github:achilles822</view>
+
 <text class='achieve-title'>
    实现的功能
 </text>

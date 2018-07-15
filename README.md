@@ -6,6 +6,8 @@
 
 - Blog: http://yanziyu.tech
 
+- Github: [achilles822](https://github.com/Achilles822/)
+
 ## 实现的功能
 
 - 正在热映列表
